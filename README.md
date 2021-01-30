@@ -1,4 +1,4 @@
-# CDVS-lab2
+# cvds-lab2
 ## Cuál es su mayor utilidad
 la utilidad es crear proyectos, utiliza modelo POM qye significa modelo de objeto de proyecto
 tiene una libreria en la cual se pueden obtener utilidades para el proyecto
@@ -59,6 +59,69 @@ y compilamos
 ## Busque cuál es el objetivo del parámetro "package" y qué otros parámetros se podrían enviar al comando mvn.
 package se usa para empaquetar , se pueden poner clean, compile, package, install, deploy, javadoc, site,test.
 ## Busque cómo ejecutar desde línea de comandos, un proyecto maven y verifique la salida cuando se ejecuta con la clase App.java como parámetro en "mainClass". Tip: https://www.mojohaus.org/exec-maven-plugin/usage.html
-mvn exec:java -Dexec.mainClass="edu.cdvs.patterns.App"
-mvn exec:java -Dexec.mainClass="edu.cdvs.patterns.App" 
-![](/images/pepe.PNG)
+ ~~~
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.App"
+ ~~~
+## Buscar cómo enviar parámetros al plugin "exec"
+ ~~~
+mvn exec: exec -Dexec.executable = "maven" [-Dexec.workingdir = "/ tmp"] -Dexec.args = "- X myproject: dist"
+ ~~~
+## puntos de ejecucion
+1. Ejecutar nuevamente la clase desde línea de comandos y verificar la salida: Hello World!
+2. Ejecutar la clase desde línea de comandos enviando su nombre como parámetro y verificar la salida. Ej: Hello Pepito!
+3. Ejecutar la clase con su nombre y apellido como parámetro. ¿Qué sucedió?
+
+* como vemos en la imagen, el 1 es el mensaje que ya estaba de helllo world
+* el segundo renglon es el hello pepito
+* y el tercer renglon ya se le pasaron los parametros de la siguiente manera
+ ~~~
+  mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.App" -Dexec.args="lorenzo"    
+ ~~~
+ 
+ ![](/images/lorenzo.PNG)
+## Verifique cómo enviar los parámetros de forma "compuesta" para que el saludo se realice con nombre y apellido.
+foto abajo
+## Ejecutar nuevamente y verificar la salida en consola. Ej: Hello Pepito Perez!
+
+ ~~~
+  mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.App" -Dexec.args="nicolas y lorenzo"    
+ ~~~
+![](/images/nicolas y lorenzo.PNG)
+
+## HACER EL ESQUELETO DE LA APLICACION
+
+Despues de tener todo el codigo que nos entregaron en el laboratorio, nos piden:
+* Cree el archivo ShapeFactory.java en el directorio src/main/java/edu/eci/cvds/patterns/shapes implementando el patrón fábrica, haciendo uso de la instrucción switch-case de Java y usando las enumeraciones.
+para esto debemos entender el patron fabrica.
+
+### Abstract Factory
+El patrón Abstract Factory nos permite crear, mediante una interfaz, conjuntos o familias de objetos (denominados productos) que dependen mutuamuente y todo esto sin especificar cual es el objeto concreto.
+Para nuestro caso, lo primero a saber es que regularShapeType por medio de enum nos delimita a la creacion de los objetos especificados. ya al momento de usar esta delimitacion, cada uno de nuestros objetos hace uso de la interfaz creada anteriormente Shape.
+desde nuestro shape main vemos que dice que hace uso de ShapeFactory.create(type), en el cual solo pasa el tipo que usa la clase enum anteriormente mencionada, entonces en nuestro factory vamos a llamar nuestra clase de esa manera
+
+## Ejecute múltiples veces la clase ShapeMain, usando el plugin exec de maven con los siguientes parámetros y verifique la salida en consola para cada una:
+
+* Sin parámetros.
+~~~
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain"
+~~~
+y nos dice
+![](/images/noparam.PNG)
+
+* Parámetro: qwerty
+~~~
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="qwerty"
+~~~
+
+![](/images/qwerty.PNG)
+Parámetro: pentagon
+~~~
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="pentagon"
+~~~
+![](/images/pentagon.PNG)
+
+Parámetro Hexagon
+~~~
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"
+~~~
+![](/images/hexagon.PNG)

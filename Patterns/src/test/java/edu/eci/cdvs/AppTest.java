@@ -1,4 +1,4 @@
-package edu.eci.cdvs;
+package edu.eci.cvds;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
