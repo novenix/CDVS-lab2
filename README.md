@@ -8,9 +8,12 @@ tiene una libreria en la cual se pueden obtener utilidades para el proyecto
 __compile__ : crea archivos _class_ , no pueden haber errores para compilar.
 
 __package__: crea un jar a base de los _class_ Genera el .jar con los .class compilados.
-__install__: pone los jar en el pc, permitiendo uso en otro proyectos maven
-__deploy__: pone el jar en un servidor remoto, para que maven pueda acceder a un servidor
-__test__: ejecuta test con JUNIT
+
+__install__: pone los jar en el pc, permitiendo uso en otro proyectos maven.
+
+__deploy__: pone el jar en un servidor remoto, para que maven pueda acceder a un servidor.
+
+__test__: ejecuta test con JUNIT.
 
 ## Ciclo de vida de la construcción
  Los tres ciclos de vida de Maven son:
