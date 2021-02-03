@@ -119,9 +119,8 @@ mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.a
 ![](/images/qwerty.PNG)
 Parámetro: pentagon
 ~~~
-mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="pentagon"
+mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Pentagon"
 ~~~
-![](/images/pentagon.PNG)
 
 Parámetro Hexagon
 ~~~
