@@ -121,7 +121,7 @@ Parámetro: pentagon
 ~~~
 mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Pentagon"
 ~~~
-
+![](/images/Pentagon.PNG)
 Parámetro Hexagon
 ~~~
 mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"
