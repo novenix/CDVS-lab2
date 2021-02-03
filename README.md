@@ -129,7 +129,7 @@ mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.a
 ![](/images/hexagon.PNG)
 ¿Cuál(es) de las anteriores instrucciones se ejecutan y funcionan correctamente y por qué?
 
-1.Sin parametros
+1. Sin parametros
 2. Hexagone
 3. Pentagone(lo escribimos con la "P" mayuscula por error, si lo escribiamos en minuscula no funcionaba)
 Se ejecutan correctamente porque al hacer el llamado estas se encuentran como casos tomados en cuenta en el archivo de enum para que sean  casos validos en la funcion con 
