@@ -117,7 +117,7 @@ mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.a
 ~~~
 
 ![](/images/qwerty.PNG)
-Parámetro: pentagon
+Parámetro: Pentagon
 ~~~
 mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Pentagon"
 ~~~
@@ -127,3 +127,15 @@ Parámetro Hexagon
 mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Hexagon"
 ~~~
 ![](/images/hexagon.PNG)
+¿Cuál(es) de las anteriores instrucciones se ejecutan y funcionan correctamente y por qué?
+
+*Sin parametros
+*Hexagone
+*Pentagone(lo escribimos con la "P" mayuscula por error, si lo escribiamos en minuscula no funcionaba)
+Se ejecutan correctamente porque al hacer el llamado estas se encuentran como casos tomados en cuenta en el archivo de enum para que sean  casos validos en la funcion con 
+el correspondiente switch type y al ser validos evitan lanzar la excepcion.
+
+¿Que es gitignore?
+el archivo "gitignore" sirve para decirle a Git qué archivos o directorios completos debe ignorar y no subir al repositorio de código.
+¿Como se usa?
+Se crea un archivo .gitignore en la raiz del proyecto y dentro del archivo .gitignore se colocara en texto plano todas las carpetas que queremo que Git ignore
