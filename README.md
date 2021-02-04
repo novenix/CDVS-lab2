@@ -28,7 +28,7 @@ Los plugins son pequeños programas complementarios que amplían las funciones d
 ## Qué es y para qué sirve el repositorio central de maven
 El repositorio central de Maven es la ubicación predeterminada para que Maven descargue todas las bibliotecas de dependencia del proyecto para su uso. 
 ## Creando proyecto
-~~~ mvn archetype:generate -Dfilter=maven-archetype-quickstart ~~~
+mvn archetype:generate -Dfilter=maven-archetype-quickstart
 cuando pregunta:
 ~~~ 
 Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 2: ~~~
